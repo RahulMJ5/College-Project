@@ -1,0 +1,98 @@
+<!Doctype html>
+
+<html>
+<head>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+    
+    <style type="text/css">
+    	body {
+            background: #0264d6;
+            /* Old browsers */
+            background: -moz-radial-gradient(center, ellipse cover, #0264d6 1%, #1c2b5a 100%);
+            /* FF3.6+ */
+            background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(1%, #0264d6), color-stop(100%, #1c2b5a));
+            /* Chrome,Safari4+ */
+            background: -webkit-radial-gradient(center, ellipse cover, #0264d6 1%, #1c2b5a 100%);
+            /* Chrome10+,Safari5.1+ */
+            background: -o-radial-gradient(center, ellipse cover, #0264d6 1%, #1c2b5a 100%);
+            /* Opera 12+ */
+            background: -ms-radial-gradient(center, ellipse cover, #0264d6 1%, #1c2b5a 100%);
+            /* IE10+ */
+            background: radial-gradient(ellipse at center, #0264d6 1%, #1c2b5a 100%);
+            /* W3C */
+            filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#0264d6', endColorstr='#1c2b5a', GradientType=1);
+            /* IE6-9 fallback on horizontal gradient */
+            height: calc(100vh);
+            width: 100%;
+        }
+
+        .b-select-wrap {
+    border: none;
+    color: #1092C9;
+    overflow: hidden;
+    position: relative;
+    border-radius: 3px;
+}
+
+.b-select-wrap::after {
+    content: "?";
+    position: absolute;
+    right: 0px;
+    top: -15px;
+    z-index: 1;
+    text-align: center;
+    width: 10%;
+    height: 100%;
+    pointer-events: none;
+    font-size: 35px;
+}
+
+.b-select {
+    padding: 5px 15px;
+    background-color: white;
+    border: 0;
+    outline: none;
+    font-size: 22px;
+    -webkit-appearance: none; /* for webkit browsers */
+    -moz-appearance: none; /* for firefox */
+    appearance: none; /* for modern browsers */
+}
+
+/* remove default caret for ie */
+.b-select::-ms-expand {
+   display:none;
+}
+.main{
+	color: #fff;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+    margin: 10px 40px;
+}
+
+    </style>
+</head>
+
+
+<body>
+<div class="main" align="center">
+	<h1 align="center">Company Revenue</h1>
+  <form method="post" action=".">
+      {% csrf_token %}
+      {{form.as_p}}
+	  {{obj.OneYearRevenue}}
+	  {{obj.TwoYearRevenue}}
+	  <button type="submit">submit</button>
+</div>
+
+  </form>
+
+</body>
+
+
+ </html>

@@ -1,0 +1,82 @@
+<!Doctype html>
+
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js" ></script>
+<style type="text/css">
+    	body {
+            background: #0264d6;
+            /* Old browsers */
+            background: -moz-radial-gradient(center, ellipse cover, #0264d6 1%, #1c2b5a 100%);
+            /* FF3.6+ */
+            background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(1%, #0264d6), color-stop(100%, #1c2b5a));
+            /* Chrome,Safari4+ */
+            background: -webkit-radial-gradient(center, ellipse cover, #0264d6 1%, #1c2b5a 100%);
+            /* Chrome10+,Safari5.1+ */
+            background: -o-radial-gradient(center, ellipse cover, #0264d6 1%, #1c2b5a 100%);
+            /* Opera 12+ */
+            background: -ms-radial-gradient(center, ellipse cover, #0264d6 1%, #1c2b5a 100%);
+            /* IE10+ */
+            background: radial-gradient(ellipse at center, #0264d6 1%, #1c2b5a 100%);
+            /* W3C */
+            filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#0264d6', endColorstr='#1c2b5a', GradientType=1);
+            /* IE6-9 fallback on horizontal gradient */
+            height: calc(100vh);
+            width: 100%;
+        }
+        .main{
+        	color : #fff;
+        }
+    </style>
+</head>
+
+
+<body>
+<div class="main" align="center">
+	<h1 align="center">Company Revenue</h1>
+  	<!-- <form method="post" action=".">
+      {% csrf_token %}
+      <h3>{{obj.Companyname}}</h3>
+	  {{obj.OneYearRevenue}}
+	</form> -->
+	<div class="container">
+	<div class="row ">
+		<div class="col-sm">
+			<table id="example" class="table table-striped table-bordered" style="width:100%">
+		        <thead>
+		            <tr>
+		            	 <!-- <th>Logo</th> -->
+		                <th>Company Name</th>
+		                <th> One Year Revenue</th>
+		            </tr>
+		        </thead>
+		        <tbody>
+		            <tr>
+		            	<!-- {% if obj.Companyname == 'tcs' %}
+		            		<td><img src="http://localhost:8000/financialcompanies/img/one.jpg" alt="tcs"></td>
+		            	{% else %}
+							<td><img src="" alt="amazon"></td>
+		            	{% endif %} -->
+		                <td>{{obj.Companyname}}</td>
+		                <td>{{obj.OneYearRevenue}}</td>
+		            </tr>
+		        </tbody>
+		  </table>
+		</div>
+	</div>
+</div>
+</div>
+
+ 
+
+  
+
+  
+</body>
+
+
+ </html>
